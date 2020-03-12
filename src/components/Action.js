@@ -3,7 +3,7 @@ import React from 'react'
   export default class Action extends React.Component{
     constructor(props){
       super(props);
-      this.state = this.props
+ 
       this.actionFunction = this.actionFunction.bind(this);
   }
 
@@ -19,7 +19,7 @@ import React from 'react'
         if(event.keyCode === 40 && this.props.player1Pos < this.props.height - this.props.playerHeight) {
           console.log('down')
           const {player1Pos} = this.props
-              this.setState({
+              this.set({
                 player1Pos: player1Pos + 5
               })
             }  

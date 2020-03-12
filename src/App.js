@@ -1,25 +1,17 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import Cursor from './components/Cursor';
+import Pong from './components/Pong';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="App" style={{display:'flex', justifyContent:'center', flexDirection:'column', alignItems:'center'}}>
+      <Cursor
+      width ={150} height={100} />
+
+      <Pong width ={window.innerWidth/2} height={window.innerHeight/2}  />
     </div>
+  
   );
 }
 
